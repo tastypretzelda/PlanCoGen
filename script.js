@@ -57,6 +57,26 @@ var coasters = [
     "Zephyrus"
 ];
 
+var themes = [
+    "White and Blue modern",
+    "Fantasy Medieval",
+    "Western",
+    "Pirate",
+    "Spooky",
+    "Adventure",
+    "Vintage",
+    "Asian",
+    "South American",
+    "German/Bavarian",
+    "Festive/Snowy",
+    "Steampunk",
+    "Viking",
+    "Atlantis",
+    "Greek/Roman",
+    "Sci-fi",
+    "Videogame Themed"
+]
+
 var wors = [
     "wooden", "steel", "hybrid", "both"
 ]
@@ -87,6 +107,8 @@ function checkOptions() {
 
 function coasterInfo() {
     document.getElementById("coaster-type").innerHTML = coasters[coasterMaterial];
+    randomTheme = Math.floor(Math.random() * 17);
+    document.getElementById("theme").innerHTML = themes[randomTheme];
 }
 
 function openNav() {

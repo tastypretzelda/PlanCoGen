@@ -35,6 +35,14 @@ html{
     transition: all 0.2s;
 }
 
+.PageHeader {
+    font-size: 50px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -15px);
+}
+
 .optionContainer:hover input ~ .selected{
     transition: all 0.2s;
     background-color: #6E71C7;
@@ -113,4 +121,11 @@ html{
     right: 25px;
     font-size: 36px;
     margin-left: 50px;
+}
+.seperator-btn-answ {
+    border-top: 1px solid #EEF0F2;
+}
+
+.container {
+    transform: translateY(100px);
 }
