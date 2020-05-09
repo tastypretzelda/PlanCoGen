@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <script src="script.js"></script>
+    </head>
+    <body>
+        <h1 class="PageHeader">Tasty's Coaster Idea Generator</h1>
+        <button class="settings" onclick="openNav()">&#9881</button>
+        <div id="settings-container" class="settings-container">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="#">About</a>
+        </div>
+        <form>
+            <h2 input="selectorTitle">Would you like only wooden coasters, steel coasters, or both?</h2>
+            <label for="wooden" class="optionContainer">
+                Only Wooden Coasters
+                <input type="radio" id="wooden" name='wors' value="wooden">
+                <span class="selected"></span>
+            </label>
+            <label for="steel" class="optionContainer">
+                Only Steel Coasters
+                <input type="radio" id="steel" name="wors" value="steel">
+                <span class="selected"></span>
+            </label>
+            <label for="hybrid" class="optionContainer">
+                Only Hybrid Coasters
+                <input type="radio" id="hybrid" name="wors" value="hybrid">
+                <span class="selected"></span>
+            </label>
+            <label for="both" class="optionContainer">
+                Anything Goes
+                <input type="radio" id="both" name="wors" value="both" checked="true">
+                <span class="selected"></span>
+            </label>
+        </form>
+        <button onclick="checkOptions()" class="pickButton">Pick Coaster</button>
+        <h1 id="coaster-type"></h1>
+    </body>
+</html>

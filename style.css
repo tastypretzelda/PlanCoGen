@@ -1,0 +1,116 @@
+html{
+    font-family: Calibri;
+    background-color: #32292f;
+    color: #EEF0F2;
+}
+
+.optionContainer {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.optionContainer input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.selected {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: #EEC643;
+    border-radius: 50%;
+    box-shadow: 0 3px #A07728; 
+    perspective: 20px;
+    transform: rotateX(30deg);
+    transition: all 0.2s;
+}
+
+.optionContainer:hover input ~ .selected{
+    transition: all 0.2s;
+    background-color: #6E71C7;
+    box-shadow: 0 3px #0D21A1;
+}
+
+.optionContainer input:checked ~ .selected {
+    background-color: #6E71C7;
+    transition: all 0.2s;
+    box-shadow: none;
+    perspective: 20px;
+    transform: translateY(3px) rotateX(30deg);
+}
+
+.pickButton {
+    background-color: #00916E;
+    height: 50px;
+    width: 250px;
+    border-radius: 30px;
+    outline: none;
+    border: none;
+    color: #EEF0F2;
+    font-size: 25px;
+}
+
+.settings {
+    position: absolute;
+    top: 0;
+    right: 50px;
+    width: 55px;
+    height: 100px;
+    font-size: 50px;
+    display: inline-block;
+    text-align: center;
+    background-color: transparent;
+    color: #EEF0F2;
+    border: none;
+    outline: none;
+    transition: all 0.3s;
+}
+
+.settings:hover{
+    transition: all 0.3s;
+    transform: scale(1.2);
+}
+
+.settings-container {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: #223843;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.settings-container a{
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #EEF0F2;
+    display: block;
+    transition: 0.3s;
+}
+
+.settings-container a:hover {
+    color: #5E747B;
+}
+
+.setting-container .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
